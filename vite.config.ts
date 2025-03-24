@@ -8,15 +8,15 @@ export default defineConfig({
       project: "./project.inlang",
       outdir: "./src/lib/paraglide",
       strategy: ["url", "preferredLanguage", "baseLocale"],
-      // urlPatterns: [
-      //   {
-      //     pattern: "/:path(.*)?",
-      //     localized: [
-      //       ["en", "/:path(.*)?"],
-      //       ["de", "/:path(.*)?"],
-      //     ],
-      //   },
-      // ],
+      urlPatterns: [
+        {
+          pattern: "/:path(.*)?",
+          localized: [
+            ["en", "/:path(.*)?"],
+            ["de", "/:path(.*)?"],
+          ],
+        },
+      ],
     }),
     sveltekit(),
   ],
