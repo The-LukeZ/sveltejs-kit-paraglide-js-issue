@@ -1,13 +1,13 @@
 {
-  "name": "kit-template-default",
+  "name": "sveltekit-paraglide-js-repro",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "start": "HOST=localhost PORT=3000 node build/index.js",
     "preview": "vite preview",
+    "start": "node ./build HOST=localhost PORT=4000",
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
@@ -16,12 +16,12 @@
     "@fontsource/fira-mono": "^5.0.0",
     "@inlang/paraglide-js": "^2.0.4",
     "@neoconfetti/svelte": "^2.0.0",
-    "@sveltejs/adapter-auto": "^5.0.0",
+    "@sveltejs/adapter-node": "^5.2.12",
     "@sveltejs/kit": "^2.20.2",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "svelte": "^5.25.2",
     "svelte-check": "^4.0.0",
-    "typescript": "^5.0.0",
+    "typescript": "^5.8.2",
     "vite": "^6.2.2"
   }
 }

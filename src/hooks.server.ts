@@ -1,8 +1,7 @@
 import { paraglideMiddleware } from "$lib/paraglide/server";
+import type { Handle } from "@sveltejs/kit";
 
-// creating a handle to use the paraglide middleware
-/** @type {import("@sveltejs/kit").Handle} */
-const paraglideHandle = async ({ event, resolve }) =>
+const paraglideHandle: Handle = async ({ event, resolve }) =>
   paraglideMiddleware(
     event.request,
     ({ request: localizedRequest, locale }) => {
